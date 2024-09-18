@@ -4,11 +4,11 @@
 <b>Discipline | <b>Mechanical Engineering
 :--|:--|
 <b> Lab | <b> Characterization of Materials
-<b> Experiment|     <b> X-ray Fluoresce microscopy for determination of chemical composition of materials (metals, alloys, ceramics)
+<b> Experiment|     <b> Electron Microprobe analyses of alloy for precise determination of chemical composition
 
 ### About the Experiment 
 
-Learning the basics of X-ray Fluorescence microscopy
+Learning the basics behind finding the chemical composition of unknown samples using ZAF corrections.
 
 <b>Name of Developer | <b> Prof. Krishanu Biswas 
 :--|:--|
