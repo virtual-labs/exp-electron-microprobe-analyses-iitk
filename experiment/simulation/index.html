@@ -1,13 +1,495 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+</head>  
+<body>
+  
+      <!-- dialogue-box -->
+<div
+
+id="dialogue-box-parent"
+style="
+width: 100vw;
+height: 100vh;
+z-index: 999;
+position: absolute;
+background-color: rgba(0, 0, 0, 0.8);
+display: block;
+"
+>
+<div class="dialogue-box">
+<h1>WELCOME TO THE SCANNING ELECTRON MICROSCOPE SIMULATION</h1>
+<h4 style="color: #16b639; font-style: italic">
+Choose the language for instructions:
+</h4>
+<div style="display: flex;">
+<button onclick="englishVoice(this)" style="background-color: green;">
+  ENG
+</button>
+<button onclick="hindiVoice(this)" style="background-color: red;">
+  HIN
+</button>
+</div>
+</div>
+</div>
+
+<!-- experiment instructions -->
+
+<div class="mg card fluid-container mb-2">
+<div class="header-bar p-2">
+<h4 class="" style="color: blue; font-style: italic; display: inline-block;">Instructions:</h4>
+<div id="typer" style="display: inline-block; margin-left: 1rem; font-size: larger; font-weight: bold;"></div>
+</div>
+</div>
+<!-- end of experiment instructions -->
+
+      <div class="container">
+        <div class="box first-box">
+          <div class="up"> 
+            
+<!--               
+            <div class="inner-div">
+              <p style="color:#ecfefd; text-shadow: 2px 2px 4px rgb(169, 240, 222); font-size: x-large; ">Start</p>
+              <button style="width: 60%; height: 40%;" class="start-button" id="strtbutton" > Start</button>
+            </div> -->
+          
+            <div class="inner-div">  <!-- Custom Toggle Switch -->
+              <p style="color:#ecfefd; text-shadow: 2px 2px 4px rgb(169, 240, 222); font-size: x-large;">Switch</p>
+              <label class="toggle">
+                  <input type="checkbox" id="toggleSwitch">
+                  <span class="slider"></span>
+                  <span class="labels" data-on="ON" data-off="OFF"></span>
+              </label>
+          </div>
+          
+          <div class="inner-div">
+             <p  style="color:#ecfefd; text-shadow: 2px 2px 4px rgb(169, 240, 222); font-size: x-large; ">Mode</p>
+            <label class="custom-toggle">
+              <input class="custom-toggle-input" id="const toggleSwitch" type="checkbox">
+              <span class="custom-toggle-labels" data-on="SE" data-off="BSE"></span>
+            </label>
+          </div> 
+          </div>
+          <div class="inner-div">
+            <p  style="color:#ecfefd; text-shadow: 2px 2px 4px rgb(169, 240, 222); font-size: x-large; ">Working Distance</p>
+           <input style="cursor: pointer;" class="newRange" type="range" id="workingslider" name="" value="0" min="0" max="20" step="5"
+              onChange="updateRangeValue(this.value)" onmousemove="updateRangeValue(this.value)">
+            <span id="newRangeValue">0 mm</span>
+          </div>
+          <div class="inner-div"><div class="menu-sample">
+            <p style="color:#ecfefd; text-shadow: 2px 2px 4px rgb(169, 240, 222); font-size: x-large;"> Select a sample :</p>
+            <select style="background-color: rgb(238, 208, 241); color: #13140d; cursor: pointer; width: 80%; height: 30px; border: 2px solid black; border-radius: 10px; font-size: 20px; text-align: center;" id="sampleDropdown">
+
+              <option  value="sample1">Sample 1</option>
+              <option value="sample2">Sample 2</option>
+              <option value="sample3">Sample 3</option>
+              <option value="sample4">Sample 4</option>
+             
+            </select>
+            <p style="color:#ecfefd; text-shadow: 2px 2px 4px rgb(169, 240, 222); font-size: x-large;">You selected: <span id="selectedSample"></span></p>
+      </div></div>
+          <div class="inner-div"> <p style="color:#ecfefd; text-shadow: 2px 2px 4px rgb(169, 240, 222); font-size: x-large; ">Select voltage</p> <input style="cursor: pointer;" class="range" type="range" id="voltageSlider" name="" step="5" value="0" min="0"
+              max="20" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)">
+            <span id="rangeValue">10 kv</span>
+          </div>
+          <div class="inner-div">
+            <p style="color:#ecfefd; text-shadow: 2px 2px 4px rgb(169, 240, 222); font-size: x-large;"> Brightness</p>
+              <input style="cursor: pointer;" class="custom-range" type="range" id="brightnessSlider" name="" value="0" min="0" max="10" step="1"
+                oninput="updateSliderValue(this.value)">
+              <span id="slider-value">0</span>
+          </div>
+          <div class="inner-div">
+            <p style="color:#ecfefd; text-shadow: 2px 2px 4px rgb(169, 240, 222); font-size: x-large;">Select Vaccum</p>
+            <input style="cursor: pointer;" class="vaccum-slider-input" id="vaccumslider" type="range" name="" value="0" min="0" max="10" step="1"
+              oninput="updateVaccumCustomSliderValue(this.value)">
+            <span class="vaccum-slider-value" id="vaccum-custom-slider-value">0 Torr</span>
+          </div>
+          <div class="inner-div">
+            <p style="color:#ecfefd; text-shadow: 2px 2px 4px rgb(169, 240, 222); font-size: x-large;">Magnification</p>
+            <Input style="cursor: pointer;" class="rangeMag" type="range" id="mag" name "" value="0" min="0" max="10" step="1"
+              onChange="rangeSlideMag(this.value)" onmousemove="rangeSlideMag(this.value)"></Input>
+            <span id="rangeValueMag">0</span>
+          </div>
+          <div class="inner-div"> <button style="cursor: pointer; width: 70%; color:#000000; text-shadow: 2px 2px 4px rgb(169, 240, 222); font-size: x-large; background-color: #2aff00;"  id="on">Start Simulation</button></div>
+        </div>
+        <div class="box" id="box2">
+            <div class="secondbox">
+              <div style="display: flex; align-items: center; justify-content: center;" class="mode-display">
+                <h1 class="se" style="font-weight: bold; color: #ecfefd;  text-shadow: 2px 2px 4px rgb(255, 230, 0);"> Back Scattered Electron Mode</h1>
+                <h1 class="bse" style="font-weight: bold; color: #ecfefd;  text-shadow: 2px 2px 4px yellow;"> Secondary Electron Mode</h1>
+              
+              </div>
+              <div class="image">
+                <canvas
+        id="beam"
+        width="15%"
+        height="440"
+        style="
+            position: absolute;
+            top: 16.5%;
+            left: 53.6%;
+            transform: translateX(-67%);
+        "
+    ></canvas>
+    <canvas
+        id="beam2"
+        width="256"
+        height="80"
+        style="
+            display: none;
+            position: absolute;
+            top: 81%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: none;
+        "
+    ></canvas>
+                <img src="Semmm1.png" >
+                <div class="small-image1" style="left: 53%; top: 13.5%;">
+                  <img src="1st.png" alt="Small Image 1" width="40%">
+                 <div class="text1">1st </div>
+              </div>
+              <div class="small-image2" style="left: 54.5%; top: 18%;">
+                <img src="2nd.png" alt="Small Image 1" width="40%">
+                <div class="text2">2nd </div>
+            </div>
+                <div class="small-image3" style="left: 50%; top: 24%;">
+                  <img src="3.png" alt="Small Image 1" width="50%">
+                  <div class="text3">3rd </div>
+              </div>
+              <div class="small-image4" style="left: 47%; top: 34%;">
+                <img src="4.png" alt="Small Image 1"  width="50%">
+                <div class="text4">4th </div>
+            </div>
+            <div class="small-image5" style="left: 52.5%; top: 45%;">
+              <img src="5.png" alt="Small Image 1" width="38%">
+              <div class="text5">5th </div>
+          </div>
+          <div class="small-image6" style="left: 57%; top: 53%;">
+            <img src="6.png"  width="29%">
+            <div class="text6">6th </div>
+        </div>
+        <div class="small-image7" style="left: 50%; top: 66%;">
+          <img src="7.png"  width="60%">
+          <div class="text7">7th</div>
+      </div>
+      <div class="small-image8" style="left: 51%; top: 83%;">
+        <img src="8.png" alt="Small Image 1" width="70%">
+        <div class="text8">8th</div>
+      </div>
+              </div>
+              
+    
+          </div>
+          </div>
+        <div class="box" id="boxthird">
+          <div class="result"> 
+            <h1  style="font-weight: bold; color: #ecfefd;  text-shadow: 2px 2px 4px yellow;">Result</h1>
+           </div>
+           <div class="output-image">
+          <img id="third-box" src="se_5kv.png" height="70%">
+        </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+        function rangeSlide(value) {
+          document.getElementById('rangeValue').innerHTML = value + ' kv';
+        }
+      </script>
+      <script type="text/javascript">
+        function updateRangeValue(value) {
+          document.getElementById('newRangeValue').innerHTML = value + " mm";
+        }
+      </script>
+      <script type="text/javascript">
+        function updateSliderValue(value) {
+          document.getElementById('slider-value').innerHTML = value;
+        }
+      </script>
+      <script type="text/javascript">
+        function updateVaccumCustomSliderValue(value) {
+          const valueWithTorr = `${value} Torr`;
+          document.getElementById('vaccum-custom-slider-value').innerHTML = valueWithTorr;
+        }
+      </script>
+      <script type="text/javascript">
+        function rangeSlideMag(value) {
+          document.getElementById('rangeValueMag').innerHTML = value;
+        }
+      </script>
+      <script> const toggleButton = document.querySelector(".toggle-sample");
+    const listItems = document.querySelectorAll(".list-item-sample");
+    
+    // Add a click event listener to each list item
+    listItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        // Update the text of the button with the selected option
+        toggleButton.textContent = item.textContent;
+        
+        // Close the list by removing the focus from the button
+        toggleButton.blur();
+      });
+    });
+    </script>
+    <script>
+          var beamCanvas = document.getElementById("beam");
+        var ctx = beamCanvas.getContext('2d');
+        var beamy = 0,
+            beamx = parseInt(beamCanvas.width / 2),
+            beamWidth, beamTimer = -1;
+        var beamCanvas2 = document.getElementById("beam2");
+        var ctx2 = beamCanvas2.getContext('2d');
+        var beam2H = beamCanvas2.height,
+            beam2W = beamCanvas2.width,
+            beamx2 = parseInt(beamCanvas2.width / 2),
+            beamTimer2 = -1;
+
+        function randEx(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function drawBeam() {
+            ctx.beginPath();
+
+            beamWidth = Math.sin(beamy * 5 / 160) * 7;
+            ctx.shadowBlur = 1;
+            ctx.shadowColor = 'orange';
+            ctx.strokeStyle = "yellow";
+            ctx.shadowOffsetY = 0;
+            ctx.shadowOffsetX = beamWidth;
+            ctx.moveTo(beamx, beamy);
+            ctx.lineTo(beamx + 1, beamy);
+            ctx.stroke();
+
+            ctx.shadowOffsetX = -beamWidth / 2;
+            ctx.moveTo(beamx, beamy);
+            ctx.lineTo(beamx + 1, beamy);
+            ctx.stroke();
+
+            ctx.shadowOffsetX = beamWidth / 2;
+            ctx.moveTo(beamx, beamy);
+            ctx.lineTo(beamx + 1, beamy);
+            ctx.stroke();
+
+            ctx.shadowOffsetX = -beamWidth;
+            ctx.moveTo(beamx, beamy);
+            beamy += 1;
+            ctx.lineTo(beamx, beamy);
+            ctx.stroke();
+        }
+
+        function drawBeam2() {
+            ctx2.beginPath();
+            ctx2.clearRect(0, 0, beam2W, beam2H);
+            ctx2.strokeStyle = "#FFFFFFBB";
+            ctx2.moveTo(beamx2, 23);
+            ctx2.lineTo(beamx2 + 60 + randEx(-5, 5), randEx(-10, 5));
+            ctx2.moveTo(beamx2 - 6, 23);
+            ctx2.lineTo(beamx2 + 60 + randEx(-5, 5), randEx(-10, 5));
+            ctx2.stroke();
+        }
+
+        // Beam on button click handler
+        document.getElementById("on").addEventListener("click", function () {
+            this.disabled = true; // Disable the button to prevent multiple clicks
+            // Beam comes here
+            clearInterval(beamTimer);
+            clearInterval(beamTimer2);
+            beamy = 0;
+            ctx.clearRect(0, 0, beamCanvas.width, beamCanvas.height);
+            ctx2.clearRect(0, 0, beam2W, beam2H);
+            beamTimer = beamTimer2 = -1;
+            beamTimer = setInterval(drawBeam, 10);
+            beamTimer2 = setInterval(drawBeam2, 100);
+        });
+    </script>
+    <script src="script.js"> </script>
+   <script>
+      document.getElementById("custom-toggle-switch").addEventListener("change", function() {
+        var seElement = document.querySelector(".se");
+        var bseElement = document.querySelector(".bse");
+    
+        if (this.checked) {
+          // BSE mode is selected
+          seElement.style.display = "none";
+          bseElement.style.display = "block";
+        } else {
+          // SE mode is selected
+          seElement.style.display = "block";
+          bseElement.style.display = "none";
+        }
+      });
+   
+    </script>
+    <script> document.getElementById("on").addEventListener("click", function () {
+      this.disabled = true; // Disable the button to prevent multiple clicks
+      // Beam comes here
+      clearInterval(beamTimer);
+      clearInterval(beamTimer2);
+      beamy = 0;
+      ctx.clearRect(0, 0, beamCanvas.width, beamCanvas.height);
+      ctx2.clearRect(0, 0, beam2W, beam2H);
+      beamTimer = beamTimer2 = -1;
+      beamTimer = setInterval(drawBeam, 10);
+      beamTimer2 = setInterval(drawBeam2, 100);
+  
+      // After the simulation finishes, change display style of the third box
+      setTimeout(function() {
+          document.getElementById("third-box").style.display = "block";
+      }, 9800); 
+  });
+  </script>
+   
+  <script>
+    function showInstruction(instruction) {
+      var instructionContainer = document.getElementById("instruction-container");
+      instructionContainer.innerHTML = "<p>" + instruction + " selected</p>";
+    }
+    </script>
+   <script type="text/javascript">
+    // Function to enable/disable the toggle switch
+    function toggleSwitchState() {
+      var customToggle = document.getElementById("custom-toggle-switch");
+      var toggleSwitch = document.getElementById("toggleSwitch");
+  
+      // Check the state of the custom toggle switch
+      if (customToggle.checked) {
+        // Enable the toggle switch
+        toggleSwitch.disabled = false;
+      } else {
+        // Disable the toggle switch
+        toggleSwitch.disabled = true;
+      }
+    }
+  
+    // Add an event listener to the custom toggle switch
+    document.getElementById("custom-toggle-switch").addEventListener("change", toggleSwitchState);
+  
+    
+    toggleSwitchState();
+  </script>
+  <script>
+  // Get a reference to the dropdown and the display element
+  const sampleDropdown = document.getElementById("sampleDropdown");
+  const selectedSample = document.getElementById("selectedSample");
+
+  // Add an event listener to the dropdown to capture the selected option
+  sampleDropdown.addEventListener("change", function () {
+    const selectedOption = sampleDropdown.options[sampleDropdown.selectedIndex];
+    selectedSample.textContent = selectedOption.textContent;
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const customToggleSwitch = document.getElementById('custom-toggle-switch');
+    const toggleSwitch = document.getElementById('toggleSwitch');
+    
+    const workingslider = document.getElementById('workingslider');
+    const sampleDropdown = document.getElementById('sampleDropdown');
+    const voltageSlider = document.getElementById('voltageSlider');
+    const vaccumslider = document.getElementById('vaccumslider');
+
+    const p1 = document.querySelector('.p1');
+    const p2 = document.querySelector('.p2');
+    const p3 = document.querySelector('.p3');
+    const p4 = document.querySelector('.p4');
+    const p5 = document.querySelector('.p5');
+    const p6 = document.querySelector('.p6');
+    const p7 = document.querySelector('.p7');
+
+    function updateDisplay() {
+      if (customToggleSwitch.checked) {
+            p1.style.display = 'none';
+            p2.style.display = 'block';
+        } else {
+            p1.style.display = 'none';
+            p2.style.display = 'none';
+        }
+        if (toggleSwitch.checked) {
+            p2.style.display = 'none';
+            p3.style.display = 'block';
+        } else {
+            
+            p3.style.display = 'none';
+        }
+
+        
+
+        workingslider.addEventListener('input', function() {
+            p3.style.display = 'none';
+            p4.style.display = 'block';
+        });
+
+        sampleDropdown.addEventListener('change', function() {
+            p4.style.display = 'none';
+            p5.style.display = 'block';
+        });
+
+        voltageSlider.addEventListener('input', function() {
+            p5.style.display = 'none';
+            p6.style.display = 'block';
+        });
+
+        vaccumslider.addEventListener('input', function() {
+            p6.style.display = 'none';
+            p7.style.display = 'block';
+        });
+    }
+
+    updateDisplay();
+    customToggleSwitch.addEventListener('change', updateDisplay);
+    toggleSwitch.addEventListener('change', updateDisplay);
+    
+});
+
+</script>
+<script> 
+function updateRangeValue(value) {
+  var newPosition = value * 0.5 + 30; 
+  var imageElement = document.querySelector('.small-image4');
+  imageElement.style.top = newPosition + '%';
+
+  var rangeValueElement = document.getElementById('newRangeValue');
+  rangeValueElement.innerText = value + ' mm';
+}
+</script>
+<script>
+    document.querySelector('.start-button').addEventListener('click', function() {
+            document.querySelector('.p0').style.display = 'none';
+            document.querySelector('.p').style.display = 'block';
+            document.querySelector('.p1').style.display = 'block';
+        });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  // Get references to the mode toggle switch and start button
+  const toggleSwitch = document.getElementById('custom-toggle-switch');
+  const startButton = document.getElementById('strtbutton');
+
+  // Disable the toggle switch initially
+  toggleSwitch.disabled = true;
+
+  // Add an event listener to the start button
+  startButton.addEventListener('click', function() {
+    // Enable the toggle switch when the start button is clicked
+    toggleSwitch.disabled = false;
+  });
+});
+
+</script>
+
+</script>
+<script src="script.js"></script>
+
+
+  </script> 
 </body>
-</html>
+
+</html>  
