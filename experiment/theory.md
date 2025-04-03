@@ -2,7 +2,7 @@
 
 Electron Probe Microanalyzer (EPMA) is a characterization technique used to determine the precise composition of samples using Wavelength Dispersive X-ray Spectroscopy (WDS). In this technique, a focused electron beam bombards the sample, generating characteristic X-rays. These X-rays are then collimated and diffracted by analysing crystals with known lattice spacings before being collected by a detector. The entire setup is mounted on a goniometer, ensuring that the distances between the sample, diffracting crystal, and detector remain constant, as shown in figure 1<br><br>
 
-To acquire X-ray spectra over a wide wavelength range, the spectrometer contains multiple analysing crystals with different lattice spacings. Each crystal is selected based on the wavelength of the characteristic X-rays to satisfy Bragg’s law of diffraction. The commonly used analysing crystals include :<br><br>
+To acquire X-ray spectra over a wide wavelength range, the spectrometer contains multiple analysing crystals with different lattice spacings. Each crystal is selected based on the wavelength of the characteristic X-rays to satisfy Bragg’s law of diffraction. The commonly used analysing crystals include :<br>
 
 •	Lithium fluoride (LiF (200)) – Small lattice spacing (0.4 nm), used for elements from Ca to Ge <br>
 •	Pentaerythritol (PET (002)) – Medium lattice spacing (0.87 nm), used for elements from Si to Ti <br>
