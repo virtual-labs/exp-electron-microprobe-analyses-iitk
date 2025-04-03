@@ -15,10 +15,10 @@ Turn on the beam, gradually increase the beam voltage and current to avoid sudde
 <b>6. Magnify the Desired Location : </b><br>
 Use the stage controls to move to the region of interest, adjust focus, brightness, and contrast to optimize image clarity. Set appropriate working distance and magnification for imaging or analysis. <br><br> 
 
-<b>7. Capture an Image or Start Compositional Mapping : </b><br>  
+<b>7. Capture an Image or Start Compositional Mapping : </b><br>
 For imaging : Adjust settings like dwell time, resolution, and scan speed before capturing the image. <br> 
 For compositional mapping :  Define the mapping area and acquisition parameters. Start data acquisition and monitor the live signal.  <br><br>
 
-<b>8. Turn Off the Electron Beam : </b><br>  
+<b>8. Turn Off the Electron Beam : </b><br>
 Gradually decrease the beam voltage before turning it off.
  
