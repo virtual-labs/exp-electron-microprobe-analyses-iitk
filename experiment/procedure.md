@@ -1,8 +1,24 @@
- (1) De-vaccum the chamber <br>
- (2) Load the sample<br>
- (3) Vaccum the chamber<br>
- (4) wait until to reach 10-4 pa<br>
- (5) Turn on the beam<br>
- (6) Magnify a location<br>
- (7) Take an image or Start taking compositional mapping<br>
- (8) Turn of the Beam <br>
+<b>1. De-vacuum the Chamber : </b><br><br>
+Slowly vent the chamber using the controlled venting system to avoid contamination or sudden pressure fluctuations.  
+Purge Ar or N<sub>2</sub> gas to vent and wait until the chamber reaches atmospheric pressure before opening the door.  <br><br>
+
+<b>2. Load the Sample : </b><br><br> 
+Wear clean gloves or use tweezers to handle the sample to prevent contamination and place the sample on the stage, ensuring it is securely mounted.  
+If necessary, apply conductive coating to non-conductive samples to prevent charging effects.  <br><br>
+
+<b>3. Vacuum the Chamber : </b><br><br> 
+Close the chamber and start the vacuum pump system to remove air from the chamber, allow the vacuum system to reach the required pressure 10<sup>-4</sup> Pa, which may take a few minutes, Confirm the pressure reading on the display panel before proceeding.  <br><br>
+
+<b>5. Turn On the Electron Beam : </b><br><br> 
+Turn on the beam, gradually increase the beam voltage and current to avoid sudden changes.<br><br> 
+
+<b>6. Magnify the Desired Location : </b><br><br> 
+Use the stage controls to move to the region of interest, adjust focus, brightness, and contrast to optimize image clarity. Set appropriate working distance and magnification for imaging or analysis. <br><br> 
+
+<b>7. Capture an Image or Start Compositional Mapping : </b><br><br>  
+For imaging : Adjust settings like dwell time, resolution, and scan speed before capturing the image. <br> 
+For compositional mapping :  Define the mapping area and acquisition parameters. Start data acquisition and monitor the live signal.  <br><br>
+
+<b>8. Turn Off the Electron Beam : </b><br><br>  
+Gradually decrease the beam voltage before turning it off.
+ 

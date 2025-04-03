@@ -95,7 +95,7 @@ Choose the language for instructions:
       </div></div>
           <div class="inner-div"> <p style="color:#ecfefd; text-shadow: 2px 2px 4px rgb(169, 240, 222); font-size: x-large; ">Select voltage</p> <input style="cursor: pointer;" class="range" type="range" id="voltageSlider" name="" step="5" value="0" min="0"
               max="20" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)">
-            <span id="rangeValue">10 kv</span>
+            <span id="rangeValue">10 kV</span>
           </div>
           <div class="inner-div">
             <p style="color:#ecfefd; text-shadow: 2px 2px 4px rgb(169, 240, 222); font-size: x-large;"> Brightness</p>
@@ -104,10 +104,10 @@ Choose the language for instructions:
               <span id="slider-value">0</span>
           </div>
           <div class="inner-div">
-            <p style="color:#ecfefd; text-shadow: 2px 2px 4px rgb(169, 240, 222); font-size: x-large;">Select Vaccum</p>
+            <p style="color:#ecfefd; text-shadow: 2px 2px 4px rgb(169, 240, 222); font-size: x-large;">Select Vacuum</p>
             <input style="cursor: pointer;" class="vaccum-slider-input" id="vaccumslider" type="range" name="" value="0" min="0" max="10" step="1"
               oninput="updateVaccumCustomSliderValue(this.value)">
-            <span class="vaccum-slider-value" id="vaccum-custom-slider-value">0 Torr</span>
+            <span class="vaccum-slider-value" id="vaccum-custom-slider-value">0 Pa</span>
           </div>
           <div class="inner-div">
             <p style="color:#ecfefd; text-shadow: 2px 2px 4px rgb(169, 240, 222); font-size: x-large;">Magnification</p>
@@ -198,7 +198,7 @@ Choose the language for instructions:
       </div>
       <script type="text/javascript">
         function rangeSlide(value) {
-          document.getElementById('rangeValue').innerHTML = value + ' kv';
+          document.getElementById('rangeValue').innerHTML = value + ' kV';
         }
       </script>
       <script type="text/javascript">
