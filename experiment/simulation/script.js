@@ -4,7 +4,7 @@
 //     voltageSlider.disabled = !isEnabled;
 //     brightnessSlider.disabled = !isEnabled;
 //     workingslider.disabled = !isEnabled;
-//     vaccumslider.disabled = !isEnabled;
+//     Vacuumslider.disabled = !isEnabled;
 //     on.disabled = !isEnabled;
 //    mag.disabled = !isEnabled;
 //    sampleDropdown.disabled = !isEnabled;
@@ -26,7 +26,7 @@ function toggleElementsState() {
   const voltageSlider = document.getElementById("voltageSlider");
   const brightnessSlider = document.getElementById("brightnessSlider");
   const workingslider = document.getElementById("workingslider");
-  const vaccumslider = document.getElementById("vaccumslider");
+  const Vacuumslider = document.getElementById("Vacuumslider");
   const on = document.getElementById("on");
   const mag = document.getElementById("mag");
   const sampleDropdown = document.getElementById("sampleDropdown");
@@ -36,7 +36,7 @@ function toggleElementsState() {
   voltageSlider.disabled = !isEnabled;
   brightnessSlider.disabled = !isEnabled;
   workingslider.disabled = !isEnabled;
-  vaccumslider.disabled = !isEnabled;
+  Vacuumslider.disabled = !isEnabled;
   on.disabled = !isEnabled;
   mag.disabled = !isEnabled;
   sampleDropdown.disabled = !isEnabled;
