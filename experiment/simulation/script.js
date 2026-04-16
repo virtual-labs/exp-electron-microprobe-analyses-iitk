@@ -19,6 +19,9 @@
 //     toggleElementsState(); // Update the state when the toggle switch changes
 // });
 // Function to enable or disable buttons and sliders
+
+let english = true;
+
 function toggleElementsState() {
   const toggleSwitch = document.getElementById("toggleSwitch");
   const isEnabled = toggleSwitch ? toggleSwitch.checked : false;
@@ -71,7 +74,7 @@ function textToSpeech(text, lang) {
   }
 }
 
-let english = true;
+
 
 function hindiVoice() {
   english = false;
