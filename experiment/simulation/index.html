@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"> </script>
     <title>Document</title>
 
 </head>  
@@ -28,10 +29,10 @@ display: block;
 Choose the language for instructions:
 </h4>
 <div style="display: flex;">
-<button onclick="englishVoice(this)" style="background-color: green;">
+<button onclick= "englishVoice()" style="background-color: green;">
   ENG
 </button>
-<button onclick="hindiVoice(this)" style="background-color: red;">
+<button onclick="hindiVoice()" style="background-color: red;">
   HIN
 </button>
 </div>
@@ -70,7 +71,7 @@ Choose the language for instructions:
           <div class="inner-div">
              <p  style="color:#ecfefd; text-shadow: 2px 2px 4px rgb(169, 240, 222); font-size: x-large; ">Mode</p>
             <label class="custom-toggle">
-              <input class="custom-toggle-input" id="const toggleSwitch" type="checkbox">
+              <input class="custom-toggle-input" id="toggleSwitch" type="checkbox">
               <span class="custom-toggle-labels" data-on="SE" data-off="BSE"></span>
             </label>
           </div> 
@@ -310,7 +311,7 @@ Choose the language for instructions:
             beamTimer2 = setInterval(drawBeam2, 100);
         });
     </script>
-    <script src="script.js"> </script>
+    
    <script>
       document.getElementById("custom-toggle-switch").addEventListener("change", function() {
         var seElement = document.querySelector(".se");
@@ -484,12 +485,6 @@ function updateRangeValue(value) {
 });
 
 </script>
-
-</script>
-<script src="script.js"></script>
-
-
-  </script> 
 </body>
 
 </html>  
