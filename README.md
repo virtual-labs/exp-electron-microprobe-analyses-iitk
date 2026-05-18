@@ -21,3 +21,5 @@ Learning the basics behind finding the chemical composition of unknown samples u
 SrNo | Name | Faculty or Student | Department| Institute | Email id
 :--|:--|:--|:--|:--|:--|
 1 | Ankita Yadav | Student | Computer Science | BU Jhansi | ankitayadav80048@gmail.com
+2 | Syed Mohammad Musthaq | Student | MSE  |  IIT Kanpur | syedm22@iitk.ac.in
+3 | Khushboo Singh | MSE |  Employee |  IIT Kanpur | skhushboo@iitk.ac.in
