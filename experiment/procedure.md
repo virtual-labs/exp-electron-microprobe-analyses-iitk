@@ -1,4 +1,18 @@
-<b>1. De-vacuum the Chamber : </b><br>
+<li>Click on <strong>Start Experiment</strong> to begin the experiment.</li>
+<li>Click on the <strong>Switch</strong> button to power on the system.</li>
+<li>Select the <strong>Mode</strong>.</li>
+<li>Choose the appropriate <strong>Working Distance</strong>.</li>
+<li>Select the required <strong>Sample</strong>.</li>
+<li>Set the <strong>Voltage</strong> value.</li>
+<li>Adjust the <strong>Brightness</strong> level.</li>
+<li>Set the required <strong>Vacuum</strong> level.</li>
+<li>Adjust the <strong>Magnification</strong> as needed.</li>
+<li>Click on <strong>Start Simulation</strong> to run the simulation.</li>
+<li>To gain a deeper understanding, click on the <strong>Insight</strong> button.</li>
+
+
+
+<!-- <b>1. De-vacuum the Chamber : </b><br>
 Slowly vent the chamber using the controlled venting system to avoid contamination or sudden pressure fluctuations.  
 Purge Ar or N<sub>2</sub> gas to vent and wait until the chamber reaches atmospheric pressure before opening the door.  <br><br>
 
