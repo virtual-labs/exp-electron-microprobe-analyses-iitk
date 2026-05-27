@@ -1,0 +1,90 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Which type of X-ray emission is typically analyzed in EPMA for determining the composition of alloys?",
+      "answers": {
+        "a": "Bremsstrahlung radiation",
+        "b": "Characteristic X-rays",
+        "c": "Auger electrons",
+        "d": "Secondary electrons"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In the context of EPMA, what is the purpose of performing a 'ZAF correction' when analyzing alloys?",
+      "answers": {
+        "a": "To correct for surface roughness of the alloy",
+        "b": "To account for differences in atomic number, absorption, and fluorescence between the sample and standards",
+        "c": "To enhance the resolution of the X-ray detectors",
+        "d": "To increase the X-ray emission from the alloy"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In the analysis of a nickel-based superalloy using EPMA, the analyst observes anomalously high concentrations of a light element. Which factors could be responsible for this observation, and how should they be mitigated?",
+      "answers": {
+        "a": "Contamination from the vacuum chamber; mitigate by thorough cleaning",
+        "b": "Beam-induced sample damage; mitigate by reducing the beam current",
+        "c": "X-ray fluorescence from neighboring elements; mitigate by using appropriate standards and applying corrections",
+        "d": "High electron dose; mitigate by using a lower accelerating voltage"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What role does the accelerating voltage play in determining the depth of analysis during EPMA of an alloy, and how does this influence the measured composition?",
+      "answers": {
+        "a": "Higher accelerating voltage increases the analysis depth, potentially incorporating signals from underlying phases and affecting the measured composition",
+        "b": "Higher accelerating voltage reduces the analysis depth, leading to more surface-sensitive measurements",
+        "c": "Accelerating voltage has no impact on the depth of analysis",
+        "d": "Higher accelerating voltage decreases X-ray intensity, complicating compositional analysis"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In EPMA analysis of a multi-phase alloy, how can the presence of elements with very different atomic numbers in adjacent phases complicate the quantitative analysis, and what strategies can be employed to address this?",
+      "answers": {
+        "a": "It can lead to underestimation of light elements; employ peak deconvolution and proper ZAF corrections to address this",
+        "b": "It results in beam scattering; reduce beam current and use low atomic number standards",
+        "c": "It enhances X-ray production; use a lower accelerating voltage to minimize this effect",
+        "d": "It complicates the focusing of the electron beam; use high-precision focusing techniques"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+  ]
+}

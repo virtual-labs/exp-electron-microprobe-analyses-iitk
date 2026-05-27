@@ -1,0 +1,22 @@
+
+/home/runner/work/exp-electron-microprobe-analyses-iitk/exp-electron-microprobe-analyses-iitk/experiment/simulation/script.js
+   79:10  warning  'hindiVoice' is defined but never used                    no-unused-vars
+   91:10  warning  'englishVoice' is defined but never used                  no-unused-vars
+  103:5   warning  'text' is defined but never used                          no-unused-vars
+  107:3   warning  'tWrapper' is assigned a value but never used             no-unused-vars
+  108:3   warning  'ti' is assigned a value but never used                   no-unused-vars
+  109:3   warning  'currentStep' is assigned a value but never used          no-unused-vars
+  110:3   warning  'contrast' is assigned a value but never used             no-unused-vars
+  111:3   warning  'brightness' is assigned a value but never used           no-unused-vars
+  112:3   warning  'vac' is assigned a value but never used                  no-unused-vars
+  113:3   warning  'av' is assigned a value but never used                   no-unused-vars
+  114:3   warning  'on' is assigned a value but never used                   no-unused-vars
+  115:3   warning  'dropped' is assigned a value but never used              no-unused-vars
+  116:3   warning  'imgs' is assigned a value but never used                 no-unused-vars
+  117:3   warning  'mode' is assigned a value but never used                 no-unused-vars
+  118:3   warning  'removeButtonclicked' is assigned a value but never used  no-unused-vars
+  119:3   warning  'inp' is assigned a value but never used                  no-unused-vars
+  139:5   warning  'statusText' is not defined                               no-undef
+
+✖ 17 problems (0 errors, 17 warnings)
+

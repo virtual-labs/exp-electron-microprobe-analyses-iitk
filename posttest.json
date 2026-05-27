@@ -1,0 +1,90 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Which characterisation technique is used to quantify the chemical composition of an unknown sample in conventional SEM and EPMA?",
+      "answers": {
+        "a": "EDX and WDS",
+        "b": "WDS and XRF",
+        "c": "XRD and WDS",
+        "d": "XRF and EDX"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What are the potential artefacts that can arise from sample charging during EPMA analysis of non-conductive alloy phases, and how can these be mitigated?",
+      "answers": {
+        "a": "Sample charging improves X-ray production, enhancing analysis",
+        "b": "Sample charging can lead to beam deflection, localized heating, and distortion of X-ray intensities; mitigate by applying a conductive coating or using low accelerating voltage",
+        "c": "Sample charging has no significant effect on EPMA analysis",
+        "d": "Sample charging can be corrected by post-processing the data"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Why is it necessary to consider the possibility of beam drift during extended EPMA measurements of alloys?",
+      "answers": {
+        "a": "Beam drift enhances the spatial resolution; no mitigation is needed",
+        "b": "Beam drift can cause misalignment of the analysis spot, leading to inaccurate compositional data",
+        "c": "Beam drift only affects imaging, not compositional analysis",
+        "d": "Beam drift can be ignored if the beam current is high enough"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What are the potential challenges in analyzing light elements such as boron (B) and carbon (C) in alloys using EPMA, and how can these challenges be overcome?",
+      "answers": {
+        "a": "Light elements have high X-ray emission efficiency; no special techniques are needed",
+        "b": "Light elements have low X-ray yields and are prone to absorption; overcome by using lower beam energies and applying appropriate ZAF corrections",
+        "c": "Light elements cause detector saturation; mitigate by using reduced beam currents",
+        "d": "They are easily ionized; use cryogenic techniques to stabilize the sample"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "How does the surface roughness of an alloy sample impact the accuracy of EPMA analysis, and what methods can be used to minimize these effects?",
+      "answers": {
+        "a": "Surface roughness enhances X-ray production; no need for correction",
+        "b": "Surface roughness can lead to uneven X-ray emission and inaccuracies in composition; mitigate by polishing the sample to a smooth, mirror-like finish",
+        "c": "Surface roughness only affects imaging, not compositional analysis",
+        "d": "Surface roughness can be corrected by software algorithms during post-processing"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}
